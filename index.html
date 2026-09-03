@@ -97,18 +97,18 @@
 <p>这是我的个人作品集与展示空间。接下来，我将在这里分享我的硬核项目经历、技术积累以及科研成果，欢迎你的访问！</p>
 <!-- ================= 轮播图代码开始 ================= -->
 <div class="gallery-container">
-  <!-- 给按钮加上 id，不用 onclick 属性了，防屏蔽 -->
   <button class="nav-btn left-btn" id="btn-left">&#10094;</button>
   
   <div class="scroll-gallery" id="myGallery">
-    <img src="/images/1.jpg">
-    <img src="/images/2.jpg">
-    <img src="/images/3.jpg">
-    <img src="/images/4.jpg">
-    <img src="/images/5.jpg">
-    <img src="/images/6.jpg">
-    <img src="/images/7.jpg">
-    <img src="/images/8.jpg">
+    <!-- 关键修改：每张图片外面包了一层 div (slide-item)，强制撑开 100% 宽度 -->
+    <div class="slide-item"><img src="/images/1.jpg"></div>
+    <div class="slide-item"><img src="/images/2.jpg"></div>
+    <div class="slide-item"><img src="/images/3.jpg"></div>
+    <div class="slide-item"><img src="/images/4.jpg"></div>
+    <div class="slide-item"><img src="/images/5.jpg"></div>
+    <div class="slide-item"><img src="/images/6.jpg"></div>
+    <div class="slide-item"><img src="/images/7.jpg"></div>
+    <div class="slide-item"><img src="/images/8.jpg"></div>
   </div>
   
 <p>  <button class="nav-btn right-btn" id="btn-right">&#10095;</button></p>
@@ -133,6 +133,7 @@
     scroll-snap-type: x mandatory;
     width: 100%;
     
+    /* 隐藏滚动条 */
     -ms-overflow-style: none; 
     scrollbar-width: none;
   }
@@ -141,19 +142,22 @@
     display: none;
   }
 
-  .scroll-gallery img {
-    /* 下面这两行是防止图片被挤压的终极武器 */
-    min-width: 100% !important; 
-    flex-shrink: 0 !important; 
-
+  /* 终极保护壳：强制每个格子占据 100% 宽度，绝不缩小！ */
+  .slide-item {
+    flex: 0 0 100% !important; 
     width: 100% !important; 
-    max-width: 100% !important;
+    min-width: 100% !important; 
+    scroll-snap-align: start !important; 
+    display: block !important;
+  }
+
+  .slide-item img {
+    width: 100% !important; 
     height: 450px !important; 
     object-fit: cover !important; 
-    scroll-snap-align: start !important; 
+    display: block !important;
     margin: 0 !important; 
     padding: 0 !important;
-    display: block !important;
     border-radius: 0 !important; 
   }
 
@@ -185,7 +189,6 @@
 </style>
 
 <script>
-  // 使用立即执行函数，确保脚本正确挂载
   (function() {
     const gallery = document.getElementById('myGallery');
     const btnLeft = document.getElementById('btn-left');
@@ -200,31 +203,19 @@
       });
     }
 
-    // 绑定按钮点击事件 (绕过 Markdown 屏蔽)
     if (btnLeft) {
       btnLeft.addEventListener('click', function() { slide(-1); });
     }
     if (btnRight) {
       btnRight.addEventListener('click', function() { slide(1); });
     }
-
-    // 自动轮播功能 (每隔 3.5 秒自动滑向下一张)
-    setInterval(function() {
-      if (!gallery) return;
-      // 如果滑动到了最后一张，就自动切回第一张
-      if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 10) {
-        gallery.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        slide(1);
-      }
-    }, 3500); 
   })();
 </script>
 <!-- ================= 轮播图代码结束 ================= -->
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2026/09/03/hello-world/" data-id="cuidOoCl5NV5_He8xY8Jgurdu" data-title="欢迎来到包善鑫的个人主页" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2026/09/03/hello-world/" data-id="cuidbVflOozyZfheRpL1325NY" data-title="欢迎来到包善鑫的个人主页" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
