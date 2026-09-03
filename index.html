@@ -95,24 +95,111 @@
       
         <p>你好！我是包善鑫。</p>
 <p>这是我的个人作品集与展示空间。接下来，我将在这里分享我的硬核项目经历、技术积累以及科研成果，欢迎你的访问！</p>
+<!-- ================= 轮播图代码开始 ================= -->
+<!-- 1. HTML 结构 -->
 <div class="gallery-wrapper">
-  <button class="nav-btn left-btn" onclick="slideGallery(this, -1)">&#10094;</button>
-  <div class="scroll-gallery">
+  <!-- 左按钮 -->
+  <button class="nav-btn left-btn" onclick="slideGallery(-1)">&#10094;</button>
+  
+  <!-- 图片容器，加上了 id 方便 JS 调用 -->
+  <div class="scroll-gallery" id="myGallery">
     <img src="/images/1.jpg">
     <img src="/images/2.jpg">
     <img src="/images/3.jpg">
     <img src="/images/4.jpg">
     <img src="/images/5.jpg">
-<img src="/images/6.jpg">
-	<img src="/images/7.jpg">
-	<img src="/images/8.jpg">
+    <img src="/images/6.jpg">
+    <img src="/images/7.jpg">
+    <img src="/images/8.jpg">
   </div>
-  <button class="nav-btn right-btn" onclick="slideGallery(this, 1)">&#10095;</button>
+  
+  <!-- 右按钮 -->
+<p>  <button class="nav-btn right-btn" onclick="slideGallery(1)">&#10095;</button></p>
 </div>
+
+<!-- 2. CSS 样式 (赋予高级感的核心) -->
+<style>
+  .gallery-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .scroll-gallery {
+    display: flex; /* 让图片横向排列 */
+    overflow-x: auto; /* 允许横向滚动 */
+    scroll-behavior: smooth; /* 开启平滑滚动 */
+    scroll-snap-type: x mandatory; /* 开启高级的吸附效果 */
+    gap: 15px; /* 图片之间的间距 */
+    width: 100%;
+    padding: 10px 0;
+    
+    /* 隐藏各种浏览器的丑陋滚动条，保持页面整洁 */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scroll-gallery::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  .scroll-gallery img {
+    /* 控制每次展示图片的宽度，这里设为100%表示每次展示一张完整图片 */
+    flex: 0 0 100%; 
+    max-height: 400px; /* 限制一下最大高度，防止图片过大撑爆屏幕 */
+    object-fit: cover; /* 保证图片比例不被拉伸变形 */
+    border-radius: 10px; /* 加点圆角更显高级 */
+    scroll-snap-align: center; /* 滚动停止时，图片自动居中对齐 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 加一点淡淡的阴影 */
+  }
+
+  /* 悬浮按钮样式 */
+  .nav-btn {
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* 圆形按钮 */
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+
+  .nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .left-btn { left: 10px; }
+  .right-btn { right: 10px; }
+</style>
+
+<!-- 3. JavaScript 逻辑 (控制按钮点击) -->
+<script>
+  function slideGallery(direction) {
+    const gallery = document.getElementById('myGallery');
+    // 获取容器的宽度，即每次滚动的距离 (滑动一张图片的宽度)
+    const scrollAmount = gallery.clientWidth; 
+    
+    // 执行平滑滚动
+    gallery.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+</script>
+<!-- ================= 轮播图代码结束 ================= -->
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2026/09/03/hello-world/" data-id="cuidwAC0I-Q7bQgOzbjrRuWlH" data-title="欢迎来到包善鑫的个人主页" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2026/09/03/hello-world/" data-id="cuidDROZX7ClWqZ4zr_q5YejW" data-title="欢迎来到包善鑫的个人主页" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
