@@ -107,12 +107,7 @@
 <div class="project-card">
   <div class="project-header">
     <h3 class="project-title">豆豉自动化拌和系统研究与应用（企业横向）</h3>
-    <span class="project-role">主研</span>
   </div>
-  <ul class="project-details">
-    <li><strong>拌和工艺建模与结构设计</strong></li>
-    <li><strong>运动规划与产线协同控制</strong></li>
-  </ul>
   
   <!-- 项目 1 的轮播图：1-8.png -->
   <div class="gallery-container">
@@ -136,12 +131,7 @@
 <div class="project-card">
   <div class="project-header">
     <h3 class="project-title">限位式猪舍智能清洁机器人系统研发（企业横向）</h3>
-    <span class="project-role">主研</span>
   </div>
-  <ul class="project-details">
-    <li><strong>移动清洁机器人系统设计</strong></li>
-    <li><strong>机器人协同与作业系统集成</strong></li>
-  </ul>
   
   <!-- 项目 2 的轮播图：9-13.png -->
   <div class="gallery-container">
@@ -162,12 +152,7 @@
 <div class="project-card">
   <div class="project-header">
     <h3 class="project-title">基于 AI 的汽车头枕品质检测系统（企业横向）</h3>
-    <span class="project-role">主研</span>
   </div>
-  <ul class="project-details">
-    <li><strong>产线设计与系统集成</strong></li>
-    <li><strong>视觉检测与轨迹规划</strong></li>
-  </ul>
   
   <!-- 项目 3 的轮播图：31-36.png -->
   <div class="gallery-container">
@@ -185,16 +170,13 @@
 </div>
 
 
-<!-- ================= 科研成果 ================= -->
+<!-- ================= 成果与获奖 ================= -->
 <div class="project-card">
   <div class="project-header">
     <h3 class="project-title">成果与获奖</h3>
   </div>
-  <ul class="project-details">
-    <li><strong>科研成果与荣誉证书展示</strong></li>
-  </ul>
   
-  <!-- 科研成果 的轮播图：41-54.png -->
+  <!-- 成果与获奖 的轮播图：41-54.png -->
   <div class="gallery-container">
     <button class="nav-btn left-btn">&#10094;</button>
     <div class="scroll-gallery">
@@ -202,38 +184,36 @@
       <div class="slide-item"><img src="/images/52.png"></div>
       <div class="slide-item"><img src="/images/53.png"></div>
       <div class="slide-item"><img src="/images/54.png"></div>
-     <div class="slide-item"><img src="/images/47.png"></div>
-      <div class="slide-item"><img src="/images/48.png"></div>
-      <div class="slide-item"><img src="/images/49.png"></div>
-      <div class="slide-item"><img src="/images/50.png"></div>
-     <div class="slide-item"><img src="/images/55.png"></div>
+      <div class="slide-item"><img src="/images/55.png"></div>
       <div class="slide-item"><img src="/images/56.png"></div>
       <div class="slide-item"><img src="/images/57.png"></div>
       <div class="slide-item"><img src="/images/58.png"></div>
-
-<pre><code>&lt;/div&gt;
-&lt;button class=&quot;nav-btn right-btn&quot;&gt;&amp;#10095;&lt;/button&gt;
-</code></pre>
+      <div class="slide-item"><img src="/images/47.png"></div>
+      <div class="slide-item"><img src="/images/48.png"></div>
+      <div class="slide-item"><img src="/images/49.png"></div>
+      <div class="slide-item"><img src="/images/50.png"></div>
+    </div>
+    <button class="nav-btn right-btn">&#10095;</button>
   </div>
 </div>
 
 
-<!-- ================= 获奖经历 (新增模块) ================= -->
+<!-- ================= 获奖经历 ================= -->
 <div class="project-card">
   <div class="project-header">
     <h3 class="project-title">获奖经历</h3>
   </div>
-  <ul class="project-details">
-    <li><strong>个人荣誉与竞赛奖项展示</strong></li>
-  </ul>
   
   <!-- 获奖经历 的轮播图 (占位图：61-63.png) -->
   <div class="gallery-container">
     <button class="nav-btn left-btn">&#10094;</button>
     <div class="scroll-gallery">
-      <div class="slide-item"><img src="/images/61.png"></div>
-      <div class="slide-item"><img src="/images/62.png"></div>
-      <div class="slide-item"><img src="/images/63.png"></div>
+      <div class="slide-item"><img src="/images/41.png"></div>
+      <div class="slide-item"><img src="/images/42.png"></div>
+      <div class="slide-item"><img src="/images/43.png"></div>
+      <div class="slide-item"><img src="/images/44.png"></div>
+      <div class="slide-item"><img src="/images/45.png"></div>
+      <div class="slide-item"><img src="/images/46.png"></div>
     </div>
     <button class="nav-btn right-btn">&#10095;</button>
   </div>
@@ -250,10 +230,10 @@
   /* 个人简介样式 */
   .resume-intro {
     background-color: #f8f9fa;
-    padding: 24px 30px;
+    padding: 24px 20px;
     border-left: 6px solid #2c3e50;
     border-radius: 8px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.03);
   }
   .resume-intro .greeting { font-size: 22px; font-weight: 500; color: #2c3e50; margin-bottom: 12px; }
@@ -261,45 +241,31 @@
   .resume-intro .description { font-size: 16px; line-height: 1.8; color: #4a5568; margin: 0; text-align: justify; }
   .resume-intro .description strong { color: #2c3e50; font-weight: 600; }
 
-  /* 项目卡片样式 */
+  /* 项目卡片样式优化：极限缩小 padding，让图片铺满 */
   .project-card {
     background-color: #ffffff;
-    padding: 30px;
+    padding: 20px 10px; /* 重点：左右内边距缩小到 10px，最大化图片区域 */
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     border: 1px solid #eaeaea;
   }
+  
   .project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
     border-bottom: 2px solid #2c3e50;
     padding-bottom: 10px;
     margin-bottom: 15px;
+    margin-left: 5px; /* 让标题稍微往里收一点点，避免顶格 */
+    margin-right: 5px;
   }
+  
   .project-title {
     font-size: 18px;
     font-weight: 700;
     color: #2c3e50;
     margin: 0;
+    line-height: 1.4;
   }
-  .project-role {
-    font-size: 16px;
-    font-weight: bold;
-    color: #e74c3c;
-    white-space: nowrap;
-    margin-left: 15px;
-  }
-  .project-details {
-    padding-left: 20px;
-    color: #4a5568;
-    font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-  }
-  .project-details li { margin-bottom: 8px; }
-  .project-details strong { color: #34495e; border-bottom: 1px solid #bdc3c7; }
 
   /* 轮播图样式 */
   .gallery-container {
@@ -308,9 +274,9 @@
     max-width: 800px; 
     margin: 0 auto;
     overflow: hidden; 
-    border-radius: 8px; 
+    border-radius: 6px; 
     background-color: #f5f6fa; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
   }
   .scroll-gallery {
     display: grid !important; 
@@ -342,28 +308,28 @@
     border-radius: 0 !important; 
   }
 
-  /* 悬浮按钮 */
+  /* 悬浮按钮，稍微改小了一点，避免在手机上遮挡太多图片 */
   .nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%); 
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s;
   }
-  .nav-btn:hover { background-color: rgba(0, 0, 0, 0.9); }
-  .left-btn { left: 10px; }
-  .right-btn { right: 10px; }
+  .nav-btn:hover { background-color: rgba(0, 0, 0, 0.8); }
+  .left-btn { left: 8px; }
+  .right-btn { right: 8px; }
 </style>
 
 <!-- ================= 统一的 JavaScript ================= -->
@@ -395,7 +361,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2026/09/03/hello-world/" data-id="cuideWa2V4igmrWrGfqmd4NVM" data-title="欢迎来到包善鑫的个人主页" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2026/09/03/hello-world/" data-id="cuidd7snlVkpHyI_EIWbAqVb5" data-title="欢迎来到包善鑫的个人主页" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
